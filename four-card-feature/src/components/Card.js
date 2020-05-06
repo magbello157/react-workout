@@ -38,8 +38,8 @@ const Icon = styled.img`
 class Card extends Component {
 
   static defaultProps = {
-    title: 'Box',
-    body: 'Lorem ipsum dolor sit amet',
+    title: 'Feature Card',
+    body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque. Ea, tempora.',
     image: image
   }
 
