@@ -6,6 +6,7 @@ import { Paragraph } from './Paragraph';
 const Box = styled.div`
   background: #fff;
   border: 1px solid #ccc;
+  border-top: ${props => props.topline};
   padding: 1.5rem;
   margin: 1rem;
   margin-top: 2;
@@ -42,7 +43,7 @@ class Card extends Component {
 
   render() {
     return (
-      <Box>
+      <Box topline={this.props.topline}>
         <Title>{this.props.title}</Title>
         <Body>{this.props.body}</Body>
         <Icon src={this.props.image} alt={this.props.alt} />

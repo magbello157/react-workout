@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import PageHead from './components/PageHead';
+import { CardSection } from './components/CardSection';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import supervisorImg from './images/icon-supervisor.svg';
 import teamBuilderImg from './images/icon-team-builder.svg';
 import karmaImg from './images/icon-karma.svg';
 import calculatorImg from './images/icon-calculator.svg';
-import { CardSection } from './components/CardSection';
 
 class App extends Component {
   render() {
@@ -22,28 +22,32 @@ class App extends Component {
       title: 'Supervisor',
       body: 'Monitors activity to identify project roadblocks',
       image: supervisorImg,
-      alt: 'Supervisor Icon'
+      alt: 'Supervisor Icon',
+      topline: 'hsl(180, 62%, 55%) solid 5px'
     }
 
     const card2 = {
       title: 'Team Builder',
       body: 'Scans our talent network to create the optimal team for your project',
       image: teamBuilderImg,
-      alt: 'Team Builder Icon'
+      alt: 'Team Builder Icon',
+      topline: 'hsl(0, 78%, 62%) solid 5px'
     }
 
     const card3 = {
       title: 'Karma',
       body: 'Regularly evaluates our talent to ensure quality',
       image: karmaImg,
-      alt: 'Karma Icon'
+      alt: 'Karma Icon',
+      topline: 'hsl(34, 97%, 64%) solid 5px'
     }
 
     const card4 = {
       title: 'Calculator',
       body: 'Uses data from past projects to provide better delivery estimates',
       image: calculatorImg,
-      alt: 'Calculator Icon'
+      alt: 'Calculator Icon',
+      topline: 'hsl(212, 86%, 64%) solid 5px'
     }
 
     const footer = {
@@ -53,47 +57,20 @@ class App extends Component {
 
     return (
       <div>
-        <PageHead
-          tagline1={header.tagline1}
-          tagline2={header.tagline2}
-          desc={header.desc}
-        />
+        <PageHead {...header} />
         <CardSection>
           <div>
-            <Card
-              title={card1.title}
-              body={card1.body}
-              image={card1.image}
-              alt={card1.alt}
-            />
+            <Card {...card1} />
           </div>
           <div>
-            <Card
-              title={card2.title}
-              body={card2.body}
-              image={card2.image}
-              alt={card2.alt}
-            />
-            <Card
-              title={card3.title}
-              body={card3.body}
-              image={card3.image}
-              alt={card3.alt}
-            />
+            <Card {...card2} />
+            <Card {...card3} />
           </div>
           <div>
-            <Card
-              title={card4.title}
-              body={card4.body}
-              image={card4.image}
-              alt={card4.alt}
-            />
+            <Card {...card4} />
           </div>
         </CardSection>
-        <Footer
-          dev={footer.developer}
-          portfolio={footer.portfolio}
-        />
+        <Footer {...footer} />
       </div>
     );
   }

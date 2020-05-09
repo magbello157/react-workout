@@ -20,14 +20,14 @@ class Footer extends Component {
     challengeBy: 'Frontend Mentor',
     femLink: 'https://www.frontendmentor.io?ref=challenge',
     developer: 'John Doe',
-    devPortfolio: '#'
+    portfolio: '#'
   }
   render() {
     return (
       <FooterSection>
         <Attribution>
           Challenge by <AttrLink href={this.props.femLink} target='_blank'>{this.props.challengeBy}</AttrLink>
-          Developed by <AttrLink href={this.props.portfolio} target='_blank'>{this.props.dev}</AttrLink>
+          Developed by <AttrLink href={this.props.portfolio} target='_blank'>{this.props.developer}</AttrLink>
         </Attribution>
       </FooterSection>
     );
