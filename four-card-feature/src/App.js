@@ -7,6 +7,7 @@ import supervisorImg from './images/icon-supervisor.svg';
 import teamBuilderImg from './images/icon-team-builder.svg';
 import karmaImg from './images/icon-karma.svg';
 import calculatorImg from './images/icon-calculator.svg';
+import { CardSection } from './components/CardSection';
 
 class App extends Component {
   render() {
@@ -57,7 +58,7 @@ class App extends Component {
           tagline2={header.tagline2}
           desc={header.desc}
         />
-        <div className="card-section">
+        <CardSection>
           <div>
             <Card
               title={card1.title}
@@ -88,7 +89,7 @@ class App extends Component {
               alt={card4.alt}
             />
           </div>
-        </div>
+        </CardSection>
         <Footer
           dev={footer.developer}
           portfolio={footer.portfolio}

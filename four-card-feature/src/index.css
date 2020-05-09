@@ -20,9 +20,3 @@ p {
   font-weight: 200;
   padding: 10px;
 }
-
-.card-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
