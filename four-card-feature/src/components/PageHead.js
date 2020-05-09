@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Paragraph } from './Paragraph';
 
 const Header = styled.header`
   width: 100%;
@@ -20,7 +21,7 @@ const Tagline2 = styled.span`
   color: hsl(234, 12%, 34%);
 `;
 
-const Description = styled.p`
+const Description = styled(Paragraph)`
   font-size: 20px;
   max-width: 700px;
   display: inline-block;

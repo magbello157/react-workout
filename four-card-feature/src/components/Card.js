@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import image from '../images/icon-karma.svg';
+import { Paragraph } from './Paragraph';
 
 const Box = styled.div`
   background: #fff;
@@ -22,11 +23,7 @@ const Title = styled.h3`
   padding-left: 10px;
 `;
 
-const Body = styled.p`
-  color: hsl(229, 6%, 66%);
-  font-size: 15px;
-  font-weight: 200;
-  padding: 10px;
+const Body = styled(Paragraph)`
   text-align: left;
 `;
 
