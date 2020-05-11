@@ -6,6 +6,13 @@ const Header = styled.header`
   width: 100%;
   margin: 3rem;
   text-align: center;
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    width: 90%;
+	  margin: 2rem;
+  }
+
 `;
 
 const Tagline1 = styled.h1`
@@ -14,17 +21,30 @@ const Tagline1 = styled.h1`
   padding: 0.2rem;
   margin-top: 2.5rem;
   color: hsl(229, 6%, 66%);
+
+  /* Mobile */
+  @media (max-width: 600px) {
+	  font-size: 25px;
+	  font-weight: bold;
+	  margin-bottom: 20px;
+  }
 `;
 
-const Tagline2 = styled.span`
+const Tagline2 = styled(Tagline1)`
   font-weight: 600;
   color: hsl(234, 12%, 34%);
+  margin-top: 0;
 `;
 
 const Description = styled(Paragraph)`
   font-size: 20px;
   max-width: 700px;
   display: inline-block;
+
+  /* Mobile */
+  @media (max-width: 600px) {
+	  font-size: 18px;
+  }
 `;
 
 class PageHead extends Component {

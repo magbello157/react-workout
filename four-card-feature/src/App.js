@@ -8,6 +8,7 @@ import supervisorImg from './images/icon-supervisor.svg';
 import teamBuilderImg from './images/icon-team-builder.svg';
 import karmaImg from './images/icon-karma.svg';
 import calculatorImg from './images/icon-calculator.svg';
+import { Wrapper } from './components/Wrapper';
 
 class App extends Component {
   render() {
@@ -56,7 +57,7 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <Wrapper>
         <PageHead {...header} />
         <CardSection>
           <div>
@@ -71,7 +72,7 @@ class App extends Component {
           </div>
         </CardSection>
         <Footer {...footer} />
-      </div>
+      </Wrapper>
     );
   }
 }
